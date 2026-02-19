@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一键美颜</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>一键美颜修图</h1>
+        
+        <div class="upload-area" id="uploadArea">
+            <input type="file" id="imageInput" accept="image/*" hidden>
+            <p>点击或拖拽上传图片</p>
+        </div>
+        
+        <div class="editor-container" id="editorContainer" style="display:none;">
+            <div class="canvas-wrapper">
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label>磨皮强度</label>
+                    <input type="range" id="smooth" min="0" max="100" value="30">
+                    <span id="smoothValue">30</span>
+                </div>
+                
+                <div class="control-group">
+                    <label>美白程度</label>
+                    <input type="range" id="whiten" min="0" max="100" value="20">
+                    <span id="whitenValue">20</span>
+                </div>
+                
+                <div class="control-group">
+                    <label>亮度</label>
+                    <input type="range" id="brightness" min="-50" max="50" value="0">
+                    <span id="brightnessValue">0</span>
+                </div>
+                
+                <div class="control-group">
+                    <label>对比度</label>
+                    <input type="range" id="contrast" min="-50" max="50" value="0">
+                    <span id="contrastValue">0</span>
+                </div>
+                
+                <div class="control-group">
+                    <label>饱和度</label>
+                    <input type="range" id="saturation" min="-50" max="50" value="0">
+                    <span id="saturationValue">0</span>
+                </div>
+                
+                <div class="button-group">
+                    <button id="resetBtn" class="btn secondary">重置</button>
+                    <button id="downloadBtn" class="btn primary">下载图片</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/editor.js"></script>
+</body>
+</html>
